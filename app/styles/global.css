@@ -4,3 +4,22 @@ body {
   font-weight: 600;
   height: 100vh;
 }
+
+button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+:root {
+  --border-radius: 20px;
+  --highlight-text-color: hsl(229, 64%, 46%);
+}

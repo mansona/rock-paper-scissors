@@ -95,6 +95,10 @@ Making the design pixel perfect I would have had different border radius' for th
 
 There was something strange with the (kerning?)/spacing with the "SCORE" word over the score. It seemed really spread out and we thought it looked odd if we tried to recreat it. So we ignored.
 
+#### Didn't use the logo image
+
+Instead of using the logo SVG we just reacreated the look using the fonts. I guess this might be more accessible
+
 ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.

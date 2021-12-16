@@ -1,5 +1,28 @@
 @import './global.css';
 @import './score-box.css';
+@import './board.css';
+@import './rules.css';
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fbfffe;
+
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.rules-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+button.rules {
+  margin: 0 30px;
+  text-transform: uppercase;
+  padding: 10px 40px;
+  border: 1px solid #888ba6;
+  color: #fbfffe;
+  border-radius: 10px;
+}

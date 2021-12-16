@@ -12,4 +12,15 @@
   </div>
 </div>
 
+<div class="board">
+  <Hand @pick="paper" @color="blue"/>
+  <Hand @pick="scissors" @color="yellow" />
+  <Hand @pick="rock" @color="red" />
+  <img class="background" src="/images/bg-triangle.svg" alt="" role="presentation">
+</div>
+
+<div class="rules-wrapper">
+  <button class="rules" type="button" name="button" {{on "click" this.showRules}}>Rules</button>
+</div>
+
 {{outlet}}
