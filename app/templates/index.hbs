@@ -8,16 +8,55 @@
   </div>
   <div class="score">
     <span class="text">SCORE</span>
-    <span class="number">12</span>
+    <span class="number">{{this.score}}</span>
   </div>
 </div>
 
-<div class="board">
-  <Hand @pick="paper" @color="blue"/>
-  <Hand @pick="scissors" @color="yellow" />
-  <Hand @pick="rock" @color="red" />
-  <img class="background" src="/images/bg-triangle.svg" alt="" role="presentation">
-</div>
+{{#if this.picked}}
+  <div class="pick">
+    <div class="you">
+      <h2>You picked</h2>
+      <div class="hand-wrapper">
+        <Hand @pick={{this.picked}} />
+        {{#if (eq this.result "win")}}
+          <img src="/images/won-background.svg" alt="" role="presentation" class="win-background">
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="result">
+      {{#if this.housePicked}}
+        <span>you {{this.result}}</span>
+        <button type="button" name="button" {{on "click" this.playAgain}}>play again</button>
+      {{else}}
+        <Timer @seconds={{3}} />
+      {{/if}}
+    </div>
+
+    <div class="house">
+      <h2>The house picked</h2>
+      {{#if this.housePicked}}
+        <div class="hand-wrapper">
+          <Hand @pick={{this.housePicked}} />
+          {{#if (eq this.result "lose")}}
+            <img src="/images/won-background.svg" alt="" role="presentation" class="win-background">
+          {{/if}}
+        </div>
+      {{else}}
+        <svg class="hand" width="210" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="40" fill="#151d3c"/>
+        </svg>
+      {{/if}}
+    </div>
+  </div>
+{{else}}
+  <div class="board">
+    <Hand @pick="paper" @onPicked={{this.onPicked}} />
+    <Hand @pick="scissors" @onPicked={{this.onPicked}} />
+    <Hand @pick="rock" @onPicked={{this.onPicked}} />
+    <img class="background" src="/images/bg-triangle.svg" alt="" role="presentation">
+  </div>
+{{/if}}
 
 <div class="rules-wrapper">
   <button class="rules" type="button" name="button" {{on "click" this.showRules}}>Rules</button>

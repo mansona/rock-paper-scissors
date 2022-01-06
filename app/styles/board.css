@@ -8,6 +8,10 @@
   margin: auto;
 }
 
+.board .hand-wrapper {
+  display: inline;
+}
+
 .board .paper {
   position: absolute;
   top: 0;

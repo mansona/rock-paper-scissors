@@ -2,7 +2,10 @@ body {
   background: radial-gradient(circle at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 600;
-  height: 100vh;
+  height: calc(100vh - 20px);
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 button {

@@ -1,6 +1,7 @@
 @import './global.css';
 @import './score-box.css';
 @import './board.css';
+@import './pick.css';
 @import './rules.css';
 
 .attribution {

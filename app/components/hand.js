@@ -1,13 +1,19 @@
 import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
 const colors = {
-  blue: ['#2944c2', '#4464ee'],
-  yellow: ['#c56923', '#eea522'],
-  red: ['#a01738', '#df3253'],
+  paper: ['#2944c2', '#4464ee'],
+  scissors: ['#c56923', '#eea522'],
+  rock: ['#a01738', '#df3253'],
 };
 
 export default class HandComponent extends Component {
   get colors() {
-    return colors[this.args.color];
+    return colors[this.args.pick];
+  }
+
+  @action
+  onClick() {
+    this.args.onPicked?.(this.args.pick);
   }
 }

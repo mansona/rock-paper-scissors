@@ -1,0 +1,59 @@
+.pick {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.pick .hand {
+  width: 320px;
+  margin-top: 40px;
+}
+
+.pick .win .hand .main-circle {
+  box-shadow: 0 0 0 6px rgba(0,0,0,0.5),
+  0 0 0 14px rgba(0,0,0,0.5),
+  0 0 0 22px rgba(0,0,0,0.5);
+  border-radius: 50%;
+}
+
+.pick .timer {
+  min-width: 30px;
+}
+
+.pick .hand-wrapper {
+  position: relative;
+}
+
+.pick .hand-wrapper .win-background{
+  position: absolute;
+  top: -180px;
+  left: -220px;
+  z-index: -10;
+}
+
+.pick h2 {
+  text-align: center;
+}
+
+.pick .result {
+  margin: 0 60px;
+  display: flex;
+  flex-direction: column;
+  min-height: 130px;
+  justify-content: space-between;
+}
+
+.pick .result span {
+  font-size: 3.5em;
+}
+
+.pick .result button {
+  background-color: #f4f5f4;
+  border-radius: var(--border-radius);
+  height: 50px;
+  text-transform: uppercase;
+  color: #d63252;
+}
