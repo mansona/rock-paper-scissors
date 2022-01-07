@@ -28,3 +28,16 @@
   top: 0;
   right: 0;
 }
+
+@media (max-width: 720px) {
+  .board {
+    width: 320px;
+    height: 340px;
+  }
+  .board .paper, .board .rock, .board .scissors {
+    width: 140px !important;
+  }
+  .board .background {
+    width: 250px;
+  }
+}

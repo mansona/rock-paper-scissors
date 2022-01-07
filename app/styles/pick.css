@@ -57,3 +57,34 @@
   text-transform: uppercase;
   color: #d63252;
 }
+
+@media (max-width: 720px) {
+  .pick {
+    flex-wrap: wrap;
+  }
+  .pick .hand-wrapper .paper, .pick  .hand-wrapper .rock, .pick .hand-wrapper .scissors, .pick .house .hand {
+    width: 140px !important;
+  }
+  .pick .you, .pick .house {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .pick .hand-wrapper .win-background {
+    width: 265px;
+    top: -24px;
+    left: -62px;
+  }
+
+  .pick .you {
+    margin-right: 45px;
+  }
+
+  .pick h2 {
+    font-size: 18px;
+  }
+
+  .pick .result {
+    order: 2;
+  }
+}

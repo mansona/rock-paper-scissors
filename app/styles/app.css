@@ -16,7 +16,7 @@
 
 .rules-wrapper {
   display: flex;
-  flex-direction: row-reverse;
+  justify-conent: end;
 }
 
 button.rules {
@@ -26,4 +26,11 @@ button.rules {
   border: 1px solid #888ba6;
   color: #fbfffe;
   border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+  .rules-wrapper {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 }
