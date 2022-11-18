@@ -47,13 +47,42 @@
 
 @media (max-width: 720px) {
   .board {
-    width: 320px;
-    height: 340px;
+    width: 360px;
+    height: 380px;
   }
-  .board .paper, .board .rock, .board .scissors {
+  .board .paper,
+  .board .rock,
+  .board .scissors,
+  .board .lizard,
+  .board .spock {
     width: 140px !important;
   }
+
+  .board .paper {
+    position: absolute;
+    top: 100px;
+    right: 0;
+  }
+
+  .board .rock {
+    position: absolute;
+    bottom: 0;
+    right: 40px;
+  }
+
+  .board .lizard {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+  }
+
+  .board .spock {
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+
   .board .background {
-    width: 250px;
+    width: 300px;
   }
 }
