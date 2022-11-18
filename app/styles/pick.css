@@ -62,7 +62,12 @@
   .pick {
     flex-wrap: wrap;
   }
-  .pick .hand-wrapper .paper, .pick  .hand-wrapper .rock, .pick .hand-wrapper .scissors, .pick .house .hand {
+  .pick .hand-wrapper .paper,
+  .pick .hand-wrapper .rock,
+  .pick .hand-wrapper .scissors,
+  .pick .hand-wrapper .lizard,
+  .pick .hand-wrapper .spock,
+  .pick .house .hand {
     width: 140px !important;
   }
   .pick .you, .pick .house {

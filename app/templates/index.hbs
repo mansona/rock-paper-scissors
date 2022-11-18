@@ -5,6 +5,8 @@
     <span>Rock</span>
     <span>Paper</span>
     <span>Scissors</span>
+    <span>Lizard</span>
+    <span>Spock</span>
   </div>
   <div class="score">
     <span class="text">SCORE</span>
@@ -54,7 +56,10 @@
     <Hand @pick="paper" @onPicked={{this.onPicked}} />
     <Hand @pick="scissors" @onPicked={{this.onPicked}} />
     <Hand @pick="rock" @onPicked={{this.onPicked}} />
-    <img class="background" src="/images/bg-triangle.svg" alt="" role="presentation">
+    <Hand @pick="lizard" @onPicked={{this.onPicked}} />
+    <Hand @pick="spock" @onPicked={{this.onPicked}} />
+
+    <img class="background" src="/images/bg-pentagon.svg" alt="" role="presentation">
   </div>
 {{/if}}
 

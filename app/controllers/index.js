@@ -3,17 +3,28 @@ import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-const possibleHands = ['rock', 'paper', 'scissors'];
+const possibleHands = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 const winGraph = {
   rock: {
     scissors: true,
+    lizard: true,
   },
   paper: {
     rock: true,
+    spock: true,
   },
   scissors: {
     paper: true,
+    lizard: true,
+  },
+  lizard: {
+    spock: true,
+    paper: true,
+  },
+  spock: {
+    scissors: true,
+    rock: true,
   },
 };
 
@@ -53,7 +64,8 @@ export default class IndexController extends Controller {
     this.picked = value;
 
     setTimeout(() => {
-      this.housePicked = possibleHands[getRandomIntInclusive(0, 2)];
+      this.housePicked =
+        possibleHands[getRandomIntInclusive(0, possibleHands.length - 1)];
 
       if (this.result === 'win') {
         this.score++;
